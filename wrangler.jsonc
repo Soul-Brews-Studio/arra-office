@@ -1,0 +1,13 @@
+{
+  // Static assets only — no `main`, so this Worker has zero compute.
+  //
+  // That is deliberate and it is the thing everyone gets backwards about the
+  // original deployment: god.buildwithoracle.com serves the SPA and NOTHING
+  // else, so every /api/* there returns 404. The backend is YOUR OWN maw node
+  // (maw-rs / maw-js on :3456), chosen in the UI and stored per browser. The
+  // CDN never sees a token and never proxies a request.
+  "name": "arra-office",
+  "account_id": "a5eabdc2b11aae9bd5af46bd6a88179e",
+  "compatibility_date": "2025-01-01",
+  "assets": { "directory": "./dist" }
+}
